@@ -12,9 +12,7 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
-# Really freaking big files
-model/
-enviro/
+
 
 # Build results
 [Dd]ebug/
