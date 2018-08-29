@@ -3,6 +3,7 @@
 #include "VertexArray.h"
 #include "IndexBuffer.h"
 #include "VertexBuffer.h"
+#include "Buffer.h"
 #include "Util.h"
 #include <vector>
 
@@ -20,8 +21,8 @@ class Mesh
 {
 public:
 	VertexArray VAO;
-	IndexBuffer IBO;
-	VertexBuffer VBO;
+	Buffer* IBO;
+	Buffer* VBO;
 public:
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Mesh"/> class.
@@ -33,7 +34,10 @@ public:
 	/// <summary>
 	/// Initializes a new empty instance of the <see cref="Mesh"/> class.
 	/// </summary>
-	Mesh() : VBO(nullptr, 0), IBO(nullptr, 0) {};
+	Mesh(){
+		VBO = new VertexBuffer(nullptr, 0);
+		IBO = new IndexBuffer(nullptr, 0);
+	};
 protected:
 	std::vector<Vertex> m_Verticies;
 	std::vector<unsigned int> m_Indicies;

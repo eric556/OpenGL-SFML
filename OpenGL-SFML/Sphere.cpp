@@ -42,16 +42,16 @@ Sphere::Sphere(float radius) : Mesh()
 	}
 
 
-	VBO.Unbind();
-	IBO.Unbind();
+	VBO->Unbind();
+	IBO->Unbind();
 
 	VAO.Bind();
-	VBO.Bind();
-	VBO.SetData(m_Verticies.data(), m_Verticies.size() * sizeof(Vertex));
+	VBO->Bind();
+	VBO->SetData(m_Verticies.data(), m_Verticies.size() * sizeof(Vertex));
 	m_layout.Push<float>(3);
 	m_layout.Push<float>(2);
 	m_layout.Push<float>(3);
-	VAO.AddBuffer(VBO, m_layout);
-	IBO.Bind();
-	IBO.SetData(m_Indicies.data(), m_Indicies.size() * sizeof(unsigned int));
+	VAO.AddBuffer(*VBO, m_layout);
+	IBO->Bind();
+	IBO->SetData(m_Indicies.data(), m_Indicies.size() * sizeof(unsigned int));
 }

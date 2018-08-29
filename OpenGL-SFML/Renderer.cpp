@@ -23,10 +23,10 @@ void Renderer::Draw(Mesh * mesh, Material * mat)
 void Renderer::Draw(Mesh * mesh, Material * mat, GLenum drawMethod)
 {
 	mesh->VAO.Bind();
-	mesh->IBO.Bind();
+	mesh->IBO->Bind();
 	if (mat) 
 	{
 		mat->Bind();
 	}
-	GLCall(glDrawElements(drawMethod, mesh->IBO.GetCount(), GL_UNSIGNED_INT, nullptr));
+	GLCall(glDrawElements(drawMethod, mesh->IBO->GetCount(), GL_UNSIGNED_INT, nullptr));
 }
