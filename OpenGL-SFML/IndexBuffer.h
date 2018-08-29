@@ -1,8 +1,9 @@
 #pragma once
 #include <GL\glew.h>
+#include "Buffer.h"
 #include "Util.h"
 
-class IndexBuffer 
+class IndexBuffer : public Buffer
 {
 public:
 
@@ -14,22 +15,9 @@ public:
 	IndexBuffer(const unsigned int* data, unsigned int count);
 
 	/// <summary>
-	/// <see cref="IndexBuffer"/> Copy constructor.
-	/// </summary>
-	/// <param name="other">The other.</param>
-	IndexBuffer(const IndexBuffer& other);
-
-	/// <summary>
 	/// Finalizes an instance of the <see cref="IndexBuffer"/> class.
 	/// </summary>
 	~IndexBuffer();
-
-	/// <summary>
-	/// Operator=s the specified other.
-	/// </summary>
-	/// <param name="other">The other.</param>
-	/// <returns></returns>
-	IndexBuffer& operator=(const IndexBuffer& other);
 
 	/// <summary>
 	/// Binds this IBO.
@@ -46,7 +34,7 @@ public:
 	/// </summary>
 	/// <param name="data">The index data.</param>
 	/// <param name="count">The index data count.</param>
-	void SetData(const unsigned int* data, unsigned int count);
+	void SetData(const void* data, unsigned int count);
 
 	/// <summary>
 	/// Gets the GL identifier. 

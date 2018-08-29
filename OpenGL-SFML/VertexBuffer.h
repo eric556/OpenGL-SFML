@@ -1,8 +1,9 @@
 #pragma once
 #include <GL\glew.h>
+#include "Buffer.h"
 #include "Util.h"
 
-class VertexBuffer 
+class VertexBuffer : public Buffer
 {
 public:
 	/// <summary>
@@ -13,22 +14,9 @@ public:
 	VertexBuffer(const void* data, unsigned int size);
 
 	/// <summary>
-	/// VBO copy constructor
-	/// </summary>
-	/// <param name="other">The other.</param>
-	VertexBuffer(const VertexBuffer& other);
-
-	/// <summary>
 	/// Finalizes an instance of the <see cref="VertexBuffer"/> class.
 	/// </summary>
 	~VertexBuffer();
-
-	/// <summary>
-	/// Operator=s the specified other.
-	/// </summary>
-	/// <param name="other">The other.</param>
-	/// <returns></returns>
-	VertexBuffer& operator=(const VertexBuffer& other);
 
 	/// <summary>
 	/// Binds this VBO.
@@ -48,7 +36,10 @@ public:
 	void SetData(const void* data, unsigned int size);
 
 	inline unsigned int GetID() const { return m_ID; }
+
+	inline unsigned int GetCount() const { return m_Count; }
 private:
+	unsigned int m_Count;
 	unsigned int m_ID;
 	mutable bool m_copied;
 };

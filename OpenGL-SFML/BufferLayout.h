@@ -3,7 +3,7 @@
 #include <vector>
 #include "Util.h"
 
-struct VertexBufferElement 
+struct BufferElement 
 {
 	unsigned int type;
 	unsigned int count;
@@ -21,17 +21,17 @@ struct VertexBufferElement
 	}
 };
 
-class VertexBufferLayout 
+class BufferLayout 
 {
 private:
-	std::vector<VertexBufferElement> m_Elements;
+	std::vector<BufferElement> m_Elements;
 	unsigned int m_Stride;
 public:
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="VertexBufferLayout"/> class.
 	/// </summary>
-	VertexBufferLayout() : m_Stride(0) {};
+	BufferLayout() : m_Stride(0) {};
 
 	/// <summary>
 	/// Pushes the specified count of T types to the layout.
@@ -51,7 +51,7 @@ public:
 	void Push<float>(unsigned int count) 
 	{
 		m_Elements.push_back({GL_FLOAT, count, GL_FALSE});
-		m_Stride += VertexBufferElement::GetSizeOfType(GL_FLOAT) * count;
+		m_Stride += BufferElement::GetSizeOfType(GL_FLOAT) * count;
 	}
 
 	/// <summary>
@@ -62,7 +62,7 @@ public:
 	void Push<unsigned int>(unsigned int count) 
 	{
 		m_Elements.push_back({ GL_UNSIGNED_INT, count, GL_FALSE });
-		m_Stride += VertexBufferElement::GetSizeOfType(GL_UNSIGNED_INT) * count;
+		m_Stride += BufferElement::GetSizeOfType(GL_UNSIGNED_INT) * count;
 	}
 
 	/// <summary>
@@ -73,9 +73,9 @@ public:
 	void Push<unsigned char>(unsigned int count) 
 	{
 		m_Elements.push_back({ GL_UNSIGNED_BYTE, count, GL_TRUE });
-		m_Stride += VertexBufferElement::GetSizeOfType(GL_UNSIGNED_BYTE) * count;
+		m_Stride += BufferElement::GetSizeOfType(GL_UNSIGNED_BYTE) * count;
 	}
 
-	inline const std::vector<VertexBufferElement>& GetElements() const { return m_Elements; }
+	inline const std::vector<BufferElement>& GetElements() const { return m_Elements; }
 	inline unsigned int GetStride() const { return m_Stride; }
 };

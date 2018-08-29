@@ -6,12 +6,6 @@ VertexArray::VertexArray()
 	GLCall(glGenVertexArrays(1, &m_ID));
 }
 
-VertexArray::VertexArray(const VertexArray & other)
-{
-	m_ID = other.m_ID;
-	other.m_copied = true;
-}
-
 VertexArray::~VertexArray()
 {
 	if (!m_copied) 
@@ -20,12 +14,6 @@ VertexArray::~VertexArray()
 	}
 }
 
-VertexArray & VertexArray::operator=(const VertexArray & other)
-{
-	m_ID = other.m_ID;
-	other.m_copied = true;
-	return *this;
-}
 
 void VertexArray::Bind()
 {
@@ -37,7 +25,7 @@ void VertexArray::Unbind()
 	GLCall(glBindVertexArray(0));
 }
 
-void VertexArray::AddBuffer(const VertexBuffer & vb, const VertexBufferLayout & layout)
+void VertexArray::AddBuffer(const Buffer & vb, const BufferLayout & layout)
 {
 	Bind();
 	vb.Bind();
@@ -48,6 +36,6 @@ void VertexArray::AddBuffer(const VertexBuffer & vb, const VertexBufferLayout & 
 		const auto& element = elements[i];
 		GLCall(glEnableVertexAttribArray(i));
 		GLCall(glVertexAttribPointer(i, element.count, element.type, element.normailzed,  layout.GetStride(), (void*)offset));
-		offset += element.count * VertexBufferElement::GetSizeOfType(element.type);
+		offset += element.count * BufferElement::GetSizeOfType(element.type);
 	}
 }

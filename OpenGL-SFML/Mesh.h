@@ -2,6 +2,7 @@
 #include "Material.h"
 #include "VertexArray.h"
 #include "IndexBuffer.h"
+#include "VertexBuffer.h"
 #include "Util.h"
 #include <vector>
 
@@ -36,6 +37,6 @@ public:
 protected:
 	std::vector<Vertex> m_Verticies;
 	std::vector<unsigned int> m_Indicies;
-	VertexBufferLayout m_layout;
+	BufferLayout m_layout;
 
 };

@@ -55,6 +55,9 @@
     <Filter Include="Source Files\Background">
       <UniqueIdentifier>{05a2aa4d-d5a4-4cf2-870c-0de9752f9a77}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\OpenGL\Buffer">
+      <UniqueIdentifier>{ea41baf3-bb0c-4a45-8bc1-cdb654755d8b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -136,9 +139,6 @@
     <ClInclude Include="VertexBuffer.h">
       <Filter>Source Files\OpenGL\VertexBuffer</Filter>
     </ClInclude>
-    <ClInclude Include="VertexBufferLayout.h">
-      <Filter>Source Files\OpenGL\VertexBuffer</Filter>
-    </ClInclude>
     <ClInclude Include="IndexBuffer.h">
       <Filter>Source Files\OpenGL\IndexBuffer</Filter>
     </ClInclude>
@@ -183,6 +183,12 @@
     </ClInclude>
     <ClInclude Include="BlenderCam.h">
       <Filter>Source Files\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer.h">
+      <Filter>Source Files\OpenGL\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferLayout.h">
+      <Filter>Source Files\OpenGL\VertexBuffer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

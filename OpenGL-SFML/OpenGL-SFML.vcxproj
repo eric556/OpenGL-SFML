@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6FF84A25-97EF-432E-840F-7CF011C12B0C}</ProjectGuid>
     <RootNamespace>OpenGLSFML</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -162,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="Background.h" />
     <ClInclude Include="BlenderCam.h" />
+    <ClInclude Include="Buffer.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="Libs\json.hpp" />
@@ -176,7 +177,7 @@
     <ClInclude Include="TextureLibrary.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="VertexArray.h" />
-    <ClInclude Include="VertexBufferLayout.h" />
+    <ClInclude Include="BufferLayout.h" />
     <ClInclude Include="VertexBuffer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,6 +1,6 @@
 #pragma once
-#include "VertexBuffer.h"
-#include "VertexBufferLayout.h"
+#include "Buffer.h"
+#include "BufferLayout.h"
 #include "Util.h"
 
 class VertexArray 
@@ -12,22 +12,9 @@ public:
 	VertexArray();
 
 	/// <summary>
-	/// VAO copy constructor
-	/// </summary>
-	/// <param name="other">The other.</param>
-	VertexArray(const VertexArray& other);
-
-	/// <summary>
 	/// Finalizes an instance of the <see cref="VertexArray"/> class.
 	/// </summary>
 	~VertexArray();
-
-	/// <summary>
-	/// Operator=s the specified other.
-	/// </summary>
-	/// <param name="other">The other.</param>
-	/// <returns></returns>
-	VertexArray& operator=(const VertexArray& other);
 	
 	/// <summary>
 	/// Binds this VAO.
@@ -44,7 +31,7 @@ public:
 	/// </summary>
 	/// <param name="vb">The vbo.</param>
 	/// <param name="layout">The vbo layout.</param>
-	void AddBuffer(const VertexBuffer& vb, const VertexBufferLayout& layout);
+	void AddBuffer(const Buffer& vb, const BufferLayout& layout);
 
 	inline unsigned int GetID() const { return m_ID; }
 private:

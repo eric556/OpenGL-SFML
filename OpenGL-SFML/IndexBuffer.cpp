@@ -7,27 +7,12 @@ IndexBuffer::IndexBuffer(const unsigned int * data, unsigned int count) : m_Coun
 	GLCall(glBufferData(GL_ELEMENT_ARRAY_BUFFER,  m_Count, data, GL_STATIC_DRAW));
 }
 
-IndexBuffer::IndexBuffer(const IndexBuffer & other)
-{
-	m_ID = other.m_ID;
-	m_Count = other.m_Count;
-	other.m_copied = true;
-}
-
 IndexBuffer::~IndexBuffer()
 {
 	if (!m_copied) 
 	{
 		GLCall(glDeleteBuffers(1, &m_ID));
 	}
-}
-
-IndexBuffer & IndexBuffer::operator=(const IndexBuffer & other)
-{
-	m_ID = other.m_ID;
-	m_Count = other.m_Count;
-	other.m_copied = true;
-	return *this;
 }
 
 void IndexBuffer::Bind() const
@@ -40,7 +25,7 @@ void IndexBuffer::Unbind() const
 	GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
 }
 
-void IndexBuffer::SetData(const unsigned int * data, unsigned int count)
+void IndexBuffer::SetData(const void* data, unsigned int count)
 {
 	m_Count = count;
 	Bind();
