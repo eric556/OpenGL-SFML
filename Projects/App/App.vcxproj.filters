@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Background.cpp">
+      <Filter>Source Files\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="BlenderCam.cpp">
+      <Filter>Source Files\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Source Files\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialLibrary.cpp">
+      <Filter>Source Files\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>Source Files\Mesh\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Source Files\Mesh\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Source Files\Mesh\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>Source Files\OpenGL\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\OpenGL\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexArray.cpp">
+      <Filter>Source Files\OpenGL\VertexArray</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>Source Files\OpenGL\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureLibrary.cpp">
+      <Filter>Source Files\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Background.h">
+      <Filter>Source Files\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="BlenderCam.h">
+      <Filter>Source Files\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Source Files\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialLibrary.h">
+      <Filter>Source Files\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>Source Files\Mesh\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Source Files\Mesh\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Source Files\Mesh\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Source Files\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer.h">
+      <Filter>Source Files\OpenGL\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>Source Files\OpenGL\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Source Files\OpenGL\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexArray.h">
+      <Filter>Source Files\OpenGL\VertexArray</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>Source Files\OpenGL\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferLayout.h">
+      <Filter>Source Files\OpenGL\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLibrary.h">
+      <Filter>Source Files\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Source Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Source Files\Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{379f50c4-db6c-4745-9138-1a021d24d208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Background">
+      <UniqueIdentifier>{4c13be25-f2bf-4148-81d1-2852ba13f788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Camera">
+      <UniqueIdentifier>{f31a3dce-0b5d-44d9-8db6-5f9dd92ae226}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Material">
+      <UniqueIdentifier>{0c10cc9c-6b14-44d7-843c-96842484e82e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mesh">
+      <UniqueIdentifier>{0dec2f79-8ea9-48e7-9497-82c5a7365225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mesh\Primitives">
+      <UniqueIdentifier>{a36fb259-2969-41a8-ae34-378aaf2551aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL">
+      <UniqueIdentifier>{0fb50809-2c9e-46db-8c8d-15c436f52e32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL\Buffer">
+      <UniqueIdentifier>{2b6b4689-6aff-4b27-9f22-f2ed6cc5a8c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL\IndexBuffer">
+      <UniqueIdentifier>{8a04615d-43da-4e60-b914-5255a5bdc01c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL\Renderer">
+      <UniqueIdentifier>{6b28d282-41b8-4531-956d-3d7104cd1f84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL\VertexArray">
+      <UniqueIdentifier>{b815acea-dfaf-4a19-9648-6a63d2bc1fe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL\VertexBuffer">
+      <UniqueIdentifier>{5efbdd0c-21d6-4483-bd43-bb48a1688b6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Texture">
+      <UniqueIdentifier>{abd5ede9-0309-485d-8765-6232fb5c3a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model">
+      <UniqueIdentifier>{bae806eb-72ef-44ce-b9c6-ad574d6b4372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util">
+      <UniqueIdentifier>{1af5d6f4-78a3-4923-81fa-9d012f021e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{8a42cbef-28c0-42de-baf1-60e15f9ecaa5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\brdf.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="res\shaders\eq_to_cube.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="res\shaders\irr_convl.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="res\shaders\pbr_GM.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="res\shaders\pbr_RM.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="res\shaders\pbr_RM_basic.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="res\shaders\prefilter.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="res\shaders\sky_box.shader">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
